@@ -60,6 +60,7 @@ $config = [
                 'POST result/create' => 'result/insertdata',
                 'GET result/last' => 'result/getlastdata',
                 'GET result'=>'result/result',
+                'GET quiz&question&answer/<id>'=>'quiz/getall',
                 ['class' => 'yii\rest\UrlRule', 'controller' => ['user', 'quiz', 'progress']],
         ],
     ],

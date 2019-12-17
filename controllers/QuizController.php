@@ -44,4 +44,9 @@ class QuizController extends ActiveController
     {
         return Quiz::findOne($id);
     }
+    public function actionGetall(){
+        $id = Yii::$app->request->get('id');
+        return Question::find()->where(['quiz_id'=>$id])->with('quiz')->with('answers')->asArray()->all();
+
+    }
 }
